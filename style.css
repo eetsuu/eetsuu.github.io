@@ -1,27 +1,153 @@
+/* --- Professional, Animated, Responsive CSS --- */
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: medium;
-    color:aqua;
-    background-color: rgba(145, 6, 145, 0.552);
-    
-
+    font-family: 'Segoe UI', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    color: #222;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
-.koodikielikuvat :hover {
-    lighting-color: blue;
-    animation: forwards;
-
-}
-h2 {
-    position: static;
-    margin-top: 20%;
-}
-header {
+.site-header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: green;
+    color: #1976d2;
     font-weight: bold;
-    font-size: x-large;
-    position: fixed;
-    margin-top: -20%;
-    
-    
+    font-size: 2.5rem;
+    background: rgba(255,255,255,0.85);
+    padding: 32px 0 16px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    letter-spacing: 1px;
+}
+.highlight {
+    color: #8e24aa;
+    background: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+    padding: 0 8px;
+    border-radius: 6px;
+}
+.subtitle {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 400;
+    margin-top: 8px;
+}
+.languages {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 16px 0;
+    flex-wrap: wrap;
+}
+.koodikielikuvat {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.5s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+    background: #fff;
+    margin: 8px;
+}
+.koodikielikuvat:hover {
+    transform: scale(1.18) rotate(-6deg);
+    box-shadow: 0 8px 32px rgba(142,36,170,0.18);
+    filter: brightness(1.1);
+}
+.intro h2, .about h2, .contact h2 {
+    margin-top: 32px;
+    color: #6a1b9a;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+.intro h3 {
+    text-align: center;
+    color: #1976d2;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.contact {
+    text-align: center;
+    margin: 48px 0 32px 0;
+}
+.contact-highlight {
+    color: #ffb300;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.about {
+    background: rgba(255,255,255,0.7);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(142,36,170,0.07);
+    max-width: 600px;
+    margin: 32px auto;
+    padding: 24px 32px;
+}
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+}
+.about-list li {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.emoji {
+    font-size: 1.3em;
+}
+.site-footer {
+    text-align: center;
+    padding: 24px 0 12px 0;
+    background: rgba(255,255,255,0.85);
+    color: #6a1b9a;
+    font-size: 1rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
+    margin-top: 48px;
+}
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+}
+.animate-slide-up {
+    animation: slideUp 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    .site-header {
+        font-size: 1.3rem;
+        padding: 16px 0 8px 0;
+    }
+    .intro h2, .about h2, .contact h2 {
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+    .languages {
+        gap: 12px;
+    }
+    .koodikielikuvat {
+        width: 56px;
+        height: 56px;
+        margin: 4px;
+    }
 }

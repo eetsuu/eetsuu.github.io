@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="main.js"></script>
-        <link stylesheet src="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eetu | Full-Stack Developer</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer></script>
     </head>
     <body>
-        <header id="otsikko">Hello Everyone, I'm Eetu!</header>
+        <header class="site-header animate-fade-in">
+            <h1>Hello Everyone, I'm <span class="highlight">Eetu</span>!</h1>
+            <p class="subtitle">Finnish Full-Stack Developer</p>
+        </header>
 
-        <div id="tietoa">
-            <h2>I am a Finnish 14-Year old Full-Stack Developer!</h2>
-            <h3>Programming Languages I use:</h3>
+        <main>
+            <section class="intro animate-slide-up">
+                <h2>I am a Finnish 14-Year old Full-Stack Developer!</h2>
+                <h3>Programming Languages I use:</h3>
+                <div class="languages">
+                    <img class="koodikielikuvat" src="c#toimiva.png" alt="C#">
+                    <img class="koodikielikuvat" src="ts.png" alt="TypeScript">
+                    <img class="koodikielikuvat" src="js.webp" alt="JavaScript">
+                    <img class="koodikielikuvat" src="Python-logo-notext.svg.png" alt="Python">
+                </div>
+            </section>
 
-        </div>
+            <section class="about animate-slide-up">
+                <h2>More About Me</h2>
+                <ul class="about-list">
+                    <li><span class="emoji">🏀</span> I play Basketball</li>
+                    <li>Building apps for 3+ years</li>
+                    <li>Proficient with Git &amp; GitHub</li>
+                    <li>Speak Finnish, English, Russian, Swedish</li>
+                    <li><span class="emoji">💻</span> I use Arch btw</li>
+                </ul>
+            </section>
 
-        <div id="koodikielikuvat">
-            <img src="c#toimiva.png" alt=" No Photo Access!">
-            <img src="ts.png"alt=" No Photo Access!">
-            <img src="js.webp" alt=" No Photo Access!">
-            
-        </div>
-        <div id="harrastuksetyms">
-            <h2 id="Väliotsikko">More About Me:</h2>
-            <h3 id="koripallo">I play Basketball</h3>
-            <h3>I have been building apps since 3-years ago</h3>
-            <h3>I know how to use Git and Github :)</h3>
-            <h3>I speak many Languages (Finnish, English, Russian and Swedish)</h3>
-            <h3 id="Arch " >I use Arch btw</h3>  
-            
-            
-        </div>
+            <section class="contact animate-fade-in">
+                <h2>Contact Me</h2>
+                <p>Discord: <span class="contact-highlight">@eetuuuuu</span></p>
+            </section>
+        </main>
 
-        <div id="kontakti">
-            <h2>Feel free to contact me in Discord @eetuuuuu</h2>
-            
-        </div>
+        <footer class="site-footer animate-fade-in">
+            <p>&copy; 2025 Eetsuu. All rights reserved.</p>
+        </footer>
     </body>
 </html>
